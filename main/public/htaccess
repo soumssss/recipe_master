@@ -1,0 +1,17 @@
+// Activation du module de réécriture d'URL :
+RewriteEngine on
+// RewriteBase "/.../"
+
+//--------------------------------------------------
+// ROUTES
+//--------------------------------------------------
+// ROUTE DE LOGOUT
+// PATTERN: /users/logout
+// TARGET: ?users=logout
+RewriteRule ^users\/logout$ index.php?users=logout [L]
+ // ROUTE DES CATEGORIES
+
+
+// --------------------------------------------------
+RewriteCond %{REQUEST_URI} !\.(js|css|jpg|gif|zip|png|pdf)$ [NC]
+RewriteRule ^(.*)$ index.php [L]
